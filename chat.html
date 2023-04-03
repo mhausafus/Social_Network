@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Direct Messages</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<header>
+	<nav>
+		<ul>
+			<li><a href="timeline.html">Timeline</a></li>
+			<li><a href="profile.html">Profile</a></li>
+			<li><a href="messages.html" class=”active”>Direct Messages</a></li>
+			<li><a href="logout.php">Logoff</a></li>
+		</ul>
+		<form action="#" method="get">
+			<input type="text" placeholder="Search for people, posts, or groups">
+			<button type="submit">Search</button>
+		</form>
+	</nav>
+</header>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Direct Messages</h1>
+		<form action="#" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="recipient">To:</label>
+				<select name="recipient" id="recipient">
+					<option value="">Select recipient</option>
+					<option value="user1">User 1</option>
+					<option value="user2">User 2</option>
+					<option value="user3">User 3</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea name="message" id="message" rows="5"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="image">Image:</label>
+				<input type="file" name="image" id="image">
+			</div>
+<!-- HTML for the messages -->
+<div class="messages">
+	<div class="message received">
+		<p>Hi, how are you?</p>
+	</div>
+	<div class="message sent">
+		<p>I'm doing well, thanks. How about you?</p>
+	</div>
+	<div class="message received">
+		<p>Not bad, thanks for asking.</p>
+	</div>
+	<!-- More messages here -->
+</div>
+
+			<button type="submit">Send Message</button>
+		</form>
+	</div>
+</body>
+</html>
+
+
