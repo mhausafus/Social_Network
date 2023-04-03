@@ -1,4 +1,123 @@
-	body {
+/* CSS for the navigation bar */
+nav {
+	background-color: #f2f2f2;
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 16px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav li {
+	margin: 0 8px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+nav a.active {
+	background-color: #4caf50;
+	color: white;
+}
+/* CSS for the search bar */
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+nav form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: auto;
+}
+
+nav input[type="text"] {
+	border: none;
+	border-radius: 4px;
+	padding: 8px;
+	margin-right: 8px;
+}
+
+nav button[type="submit"] {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+		header {
+			background-color: #333;
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+
+		.container {
+			margin: 50px auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 80%;
+			max-width: 800px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 20px;
+		}
+
+		.profile-picture {
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+			border-radius: 50%;
+			margin-bottom: 20px;
+			background-image: url("https://placekitten.com/200/200"); /* Replace with your own profile picture */
+			background-size: cover;
+			background-position: center;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 20px;
+			margin: 10px 0;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}	
+		
+		body {
 			margin: 0;
 			padding: 0;
 			display: flex;
