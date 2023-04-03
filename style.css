@@ -61,7 +61,143 @@ nav button[type="submit"] {
 	padding: 8px;
 	cursor: pointer;
 }
+/* CSS for the messages */
+.messages {
+	display: flex;
+	flex-direction: column;
+}
 
+.message {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 8px;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.message.received {
+	align-items: flex-start;
+	background-color: #f2f2f2;
+}
+
+.message.sent {
+	align-items: flex-end;
+	background-color: #4caf50;
+	color: white;
+}
+
+.message p {
+	margin: 0;
+}
+
+/* Add some space between messages from different senders */
+.message.received + .message.sent {
+	margin-top: 16px;
+}
+.message.sent + .message.received {
+	margin-top: 16px;
+}
+.timeline {
+		margin: 0 auto;
+		padding: 0;
+		max-width: 800px;
+		list-style: none;
+}
+	.timeline li {
+		position: relative;
+		margin-bottom: 50px;
+		padding: 30px;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+	.timeline li::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		width: 2px;
+		background-color: #e5e5e5;
+}
+	.timeline li::after {
+		content: "";
+		position: absolute;
+		top: 25px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 12px;
+		width: 12px;
+		background-color: #fff;
+		border: 2px solid #e5e5e5;
+		border-radius: 50%;
+		z-index: 1;
+}
+	.timeline li:first-child::after {
+		top: 15px;
+}
+	.timeline li:last-child::before {
+		height: 50px;
+}
+	.timeline li .timeline-heading {
+		text-align: center;
+		margin-bottom: 20px;
+}
+	.timeline li .timeline-heading h2 {
+		margin: 0;
+		font-size: 24px;
+		font-weight: bold;
+}
+	.timeline li .timeline-content {
+		text-align: center;
+		line-height: 1.5;
+}
+	.timeline li .timeline-content p {
+		margin: 0;
+		font-size: 18px;
+}
+	.timeline li .timeline-content img {
+		max-width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+	.timeline li .timeline-content .timeline-meta {
+		font-size: 14px;
+		color: #999;
+		margin-top: 20px;
+}
+	.timeline li .timeline-content .timeline-meta span {
+		display: inline-block;
+		margin-right: 10px;
+}
+	.timeline li .timeline-footer {
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+}
+	.timeline li .timeline-footer a {
+		color: #999;
+		margin-right: 20px;
+		font-size: 14px;
+}
+	.timeline li .timeline-footer a:hover {
+		color: #333;
+}
+	.timeline li .timeline-footer i {
+		font-size: 20px;
+		margin-right: 10px;
+		color: #999;
+}
 		header {
 			background-color: #333;
 			color: white;
